@@ -74,6 +74,14 @@ pipeline {
           }
         }
 
+        stage('Create Kubernetes Namespace') {
+            steps {
+                script {
+                    sh 'kubectl create namespace prod || true'
+                }
+            }
+        }
+
         stage('Kubernetes Deploy') {
           agent {label 'kops'}
             steps {
