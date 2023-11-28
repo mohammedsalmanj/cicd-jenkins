@@ -7,7 +7,7 @@ pipeline {
     }
 */
     environment {
-        registry = "pull dockerlrnz1/vp-app-app"
+        registry = "dockerlrnz1/vp-app-app"
         registryCredential = 'dockerhub'
     }
 
